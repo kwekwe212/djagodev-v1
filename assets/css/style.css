@@ -1,0 +1,822 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #f8f8f8;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+.btn {
+  padding: 10px 20px !important;
+  background-color: #74ce37;
+  border-radius: 7px;
+  font-size: 16px;
+  color: white !important;
+  border: none;
+  text-decoration: none;
+  border: 2px solid #74ce37 !important;
+  transition: 0.3s ease-in;
+}
+.btn:hover {
+  background-color: white;
+  color: #74ce37 !important;
+  border: 2px solid #74ce37 !important;
+}
+
+/* ========================= NAV ========================= */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: white;
+}
+
+nav .title {
+  display: flex;
+  align-items: center;
+}
+
+nav .title img {
+  margin-right: 10px;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav .menu a {
+  padding: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+nav .menu a:hover {
+  color: #004489;
+}
+
+.hamburger {
+  display: none;
+  transform: scale(0.8);
+}
+
+@media (max-width: 1024px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  nav .menu {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: inline-block;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  nav .menu {
+    /* display: none; */
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 69px;
+    left: -100%;
+    transition: 0.7s;
+    background-color: white;
+  }
+
+  nav .menu li {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .active {
+    left: 0 !important;
+  }
+}
+
+@media (max-width: 426px) {
+  nav .title h2 {
+    display: none;
+  }
+}
+
+/* ========================= NAV ========================= */
+
+/* ========================= HOME ========================= */
+#home {
+  height: 700px;
+  display: flex;
+  padding: 150px;
+  background-image: url(/assets/img/background/1.svg);
+  background-size: cover;
+  background-position: bottom left;
+  align-items: center;
+}
+
+#home .content,
+#home .gambar {
+  width: 50%;
+  transform: translate(0, -70px) !important;
+}
+
+#home .content {
+  font-size: 1.2em;
+  height: fit-content;
+  padding: 20px 0;
+  color: white;
+}
+
+#home .content h1 {
+  margin-bottom: 20px;
+}
+
+#home .content h4 {
+  margin-bottom: 30px;
+}
+
+#home .gambar img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #home {
+    padding: 80px;
+    padding-top: 50px;
+  }
+
+  #home .content,
+  #home .gambar {
+    width: 100%;
+    transform: translate(0, -70px);
+  }
+
+  #home .content h1 {
+    font-size: 1.4em;
+  }
+
+  #home .content h4 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 426px) {
+  #home {
+    padding: 100px 30px;
+    padding-top: 170px;
+    height: fit-content;
+    flex-direction: column-reverse;
+    background-image: url(/assets/img/background/jan.svg);
+  }
+
+  #home .content,
+  #home .gambar {
+    width: 100%;
+    transform: translate(0, -50px) !important;
+  }
+
+  #home .gambar {
+    margin-bottom: 20px;
+  }
+
+  #home .content h1 {
+    font-size: 1.4em;
+  }
+
+  #home .content h4 {
+    font-size: 1em;
+  }
+}
+
+/* ========================= HOME ========================= */
+
+/* ========================= KHUSUS ========================= */
+#khusus {
+  background-color: #f1ffdc;
+  border-radius: 0 100px 0 100px;
+  padding-bottom: 30px;
+}
+
+#khusus .sub {
+  padding: 30px;
+  text-align: center;
+}
+
+#khusus .sub h1 {
+  font-size: 1.8em;
+}
+
+#khusus .content {
+  width: 100%;
+  margin: 50px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#khusus .content .card {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10px;
+  border: 2px solid yellow;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 10px;
+  border: 5px solid #8e5bcb;
+  background-color: white;
+}
+
+#khusus .card img {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+#khusus .card h3 {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  #khusus .content .card {
+    margin-bottom: 10px;
+  }
+}
+
+/* ========================= KHUSUS ========================= */
+
+/* ========================= SERVICE ========================= */
+#service {
+  padding-top: 80px;
+}
+
+#service .sub {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#service .sub h1 {
+  font-size: 1.8em;
+}
+
+/* landing */
+
+.landing {
+  height: 700px;
+  display: flex;
+  padding: 150px;
+  background-image: url(/assets/img/background/1.svg);
+  background-size: cover;
+  background-position: bottom left;
+  align-items: center;
+}
+
+.landing .content,
+.landing .gambar {
+  width: 50%;
+  transform: translate(0, -50px) !important;
+}
+
+.landing .content {
+  font-size: 1.2em;
+  height: fit-content;
+  padding: 20px 0;
+  color: white;
+}
+
+.landing .content p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.landing .content ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.landing .content ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.landing ul li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+.landing .gambar img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .landing {
+    padding: 70px;
+  }
+
+  .landing .content,
+  .landing .gambar {
+    width: 90%;
+    transform: translate(0, -40px) !important;
+  }
+}
+
+@media (max-width: 426px) {
+  .landing {
+    height: fit-content;
+    background-image: none;
+    background-color: #1790e0;
+    flex-direction: column-reverse;
+    padding: 70px 30px;
+    border-radius: 0 0 100px 0;
+  }
+
+  .landing .content,
+  .landing .gambar {
+    width: 90%;
+    transform: translate(0, 0px) !important;
+  }
+}
+
+/* website */
+
+.website {
+  height: 850px;
+  display: flex;
+  padding: 110px;
+  background-image: url(/assets/img/background/3_website.svg);
+  background-size: cover;
+  background-position: right top;
+  align-items: center;
+  transform: translate(0, -70px) !important;
+}
+
+.website .gambar,
+.website .content {
+  width: 50%;
+  margin: 0 20px;
+  transform: translate(0, 30px) !important;
+}
+
+.website .gambar img {
+  width: 100%;
+}
+
+.website .content {
+  font-size: 1.2em;
+  height: fit-content;
+  color: white;
+}
+
+.website .content p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.website .content ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.website .content ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.website ul li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+@media (max-width: 1025px) {
+  .website {
+    padding: 50px;
+    height: 650px;
+  }
+}
+
+@media (max-width: 768px) {
+  .website {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 426px) {
+  .website {
+    flex-direction: column;
+    background-image: none;
+    transform: translate(0, 0) !important;
+    background-color: #1790e0;
+    margin: 20px 0;
+    border-radius: 100px 0 0 100px;
+    padding: 50px 30px;
+    height: fit-content;
+  }
+
+  .website .gambar,
+  .website .content {
+    width: 100%;
+    margin: 10px;
+    transform: translate(0, -40px) !important;
+  }
+}
+
+/* design */
+
+.design {
+  height: 750px;
+  display: flex;
+  padding: 150px;
+  background-image: url(/assets/img/background/4_desain.svg);
+  background-size: cover;
+  background-position: top left;
+  align-items: center;
+}
+
+.design .content,
+.design .gambar {
+  width: 50%;
+  transform: translate(0, 50px) !important;
+  margin: 10px;
+}
+
+.design .content {
+  font-size: 1.2em;
+  height: fit-content;
+  padding: 20px 0;
+  color: white;
+}
+
+.design .content p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.design .content ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.design .content ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.design ul li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+.design .gambar img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .design {
+    padding: 70px;
+    height: 700px;
+  }
+
+  .design .content,
+  .design .gambar {
+    width: 90%;
+  }
+
+  .design .content h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 426px) {
+  .design {
+    height: fit-content;
+    background-image: none;
+    background-color: #1790e0;
+    flex-direction: column-reverse;
+    padding: 70px 30px;
+    border-radius: 0 100px 0 0;
+  }
+
+  .design .content,
+  .design .gambar {
+    transform: translate(0, 0) !important;
+  }
+}
+
+/* ========================= SERVICE ========================= */
+
+/* ========================= SHOW CASE ========================= */
+section#showcase {
+  padding-top: 75px;
+}
+#showcase .container {
+  height: fit-content !important;
+  min-height: 400px;
+}
+
+#showcase .sub {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#showcase .sub h1 {
+  font-size: 1.8em;
+}
+.portfolio-menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.portfolio-menu ul li {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.portfolio-menu ul li:hover {
+  color: #10438c;
+}
+
+.portfolio-menu ul li.active {
+  color: #10438c;
+  font-weight: bold;
+}
+
+.portfolio-item {
+}
+
+.portfolio-item .item {
+  width: 33.3%;
+  height: fit-content !important;
+}
+
+.portfolio-item .item img {
+  width: 100%;
+}
+
+@media (max-width: 426px) {
+  .portfolio-item .item {
+    width: 50%;
+  }
+}
+/* ========================= SHOW CASE ========================= */
+
+/* ========================= TESTIMONI ========================= */
+
+#testi {
+  padding-top: 50px;
+}
+
+#testi .sub {
+  text-align: center;
+}
+
+#testi .sub h1 {
+  font-size: 1.8em;
+}
+
+#testi .content {
+  margin-top: 30px;
+  display: flex;
+  height: fit-content;
+  background-color: #f2ffdd;
+  border-radius: 0 100px 0 100px;
+  padding: 50px 30px;
+  justify-content: center;
+}
+
+#testi .content .card {
+  max-width: 470px;
+  width: 50%;
+  height: 200px;
+  margin: 0 20px;
+  display: flex;
+  background-color: white;
+  transition: 0.5s ease-in;
+}
+
+#testi .content .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+
+#testi .card .gambar {
+  height: 100%;
+}
+
+#testi .card .gambar img {
+  width: auto;
+  height: 100%;
+}
+
+#testi .card .ket {
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#testi .card .auth h5 {
+  color: #00468b;
+  font-weight: bold;
+}
+
+#testi .card .auth p {
+  font-weight: lighter;
+  font-size: 0.9em;
+}
+
+@media (max-width: 769px) {
+  #testi .content {
+    flex-wrap: wrap;
+  }
+
+  #testi .content .card {
+    width: 500px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 769px) {
+  #testi .sub {
+    padding: 15px;
+  }
+
+  #testi .content {
+    padding: 50px 30px;
+  }
+
+  #testi .content .card {
+    flex-wrap: wrap;
+    height: fit-content;
+    border: 15px;
+    border-radius: 15px !important;
+    overflow: hidden;
+  }
+
+  #testi .card .gambar {
+    display: none;
+  }
+
+  #testi .card .auth h5 {
+    text-align: right;
+  }
+
+  #testi .card .auth p {
+    text-align: right;
+  }
+}
+
+/* ========================= TESTIMONI ========================= */
+
+/* ========================= HUBUNGI ========================= */
+#hubungi {
+  padding-top: 80px;
+  padding-bottom: 0;
+}
+
+#hubungi .sub {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#hubungi .content {
+  display: flex;
+  margin-top: 30px;
+}
+
+#hubungi .content .map,
+#hubungi .content .call {
+  width: 50%;
+}
+
+#hubungi .content .call {
+  background-color: #168cdc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 160px;
+  padding: 150px;
+  color: white;
+  font-weight: bold;
+  justify-content: center;
+}
+
+#hubungi .info,
+#hubungi .action {
+  width: fit-content;
+}
+
+#hubungi .info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  transform: scale(1.2);
+}
+
+#hubungi .info span {
+  display: flex;
+  align-items: center;
+}
+
+#hubungi .info img {
+  width: 36px;
+  height: auto;
+  margin-right: 20px;
+}
+
+#hubungi .action {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+}
+
+#hubungi .action a.ungu {
+  background-color: #6013be;
+  border: 2px solid #6013be !important;
+}
+#hubungi .action a.ungu:hover {
+  color: #6013be !important;
+  background-color: white;
+  border: 2px solid #6013be;
+}
+
+@media (max-width: 426px) {
+  #hubungi {
+    padding-top: 80px;
+  }
+  #hubungi .sub {
+    padding: 15px;
+  }
+
+  #hubungi .content {
+    flex-direction: column;
+  }
+
+  #hubungi .content .map,
+  #hubungi .content .call {
+    width: 100%;
+  }
+
+  #hubungi .content .call {
+    height: 300px;
+  }
+  #hubungi .content .call .info {
+    width: 320px;
+  }
+
+  #hubungi .info {
+    transform: scale(1);
+  }
+}
+
+/* ========================= HUBUNGI ========================= */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: #f8f8f8;
+}
+
+.footer h4 {
+  font-weight: lighter;
+}
