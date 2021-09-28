@@ -1,4 +1,4 @@
 # Landing page Djagodev-v1
 <div style="text-align: center">
-![enter image description here](readme.png)
+<img src="readme.png" alt="">
 </div>
